@@ -1,0 +1,11 @@
+services:
+  crepus-xd:
+    build: .
+    restart: unless-stopped
+    command: npm run pairing
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./session:/app/session
+      - ./sessions:/app/sessions
+      - ./database:/app/database

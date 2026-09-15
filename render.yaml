@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: crepus-xd-pairing
+    runtime: node
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: npm run pairing
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: CREPUS_CHANNELS
+        sync: false
+      - key: CREPUS_TG_ADMIN
+        sync: false
